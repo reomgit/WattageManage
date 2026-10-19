@@ -6,14 +6,26 @@
 	objectVersion = 110;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		A10000000000000000000001 /* WattageLiveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000002 /* WattageLiveData.swift */; };
+		A10000000000000000000003 /* WattageWidgets.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A10000000000000000000004 /* WattageWidgets.appex */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		AFF03BA63085E53900145A7D /* WattageManage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WattageManage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10000000000000000000002 /* WattageLiveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WattageWidgets/Shared/WattageLiveData.swift; sourceTree = SOURCE_ROOT; };
+		A10000000000000000000004 /* WattageWidgets.appex */ = {isa = PBXFileReference; explicitFileType = wrapper.app-extension; includeInIndex = 0; path = WattageWidgets.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		AFF03BA83085E53900145A7D /* WattageManage */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = WattageManage;
+			sourceTree = "<group>";
+		};
+		A10000000000000000000005 /* WattageWidgets */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = WattageWidgets;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -24,6 +36,12 @@
 			files = (
 			);
 		};
+		A10000000000000000000006 /* Widget Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = ();
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -31,6 +49,8 @@
 			isa = PBXGroup;
 			children = (
 				AFF03BA83085E53900145A7D /* WattageManage */,
+				A10000000000000000000005 /* WattageWidgets */,
+				A10000000000000000000002 /* WattageLiveData.swift */,
 				AFF03BA73085E53900145A7D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -39,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				AFF03BA63085E53900145A7D /* WattageManage.app */,
+				A10000000000000000000004 /* WattageWidgets.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -53,6 +74,10 @@
 				AFF03BA23085E53900145A7D /* Sources */,
 				AFF03BA33085E53900145A7D /* Frameworks */,
 				AFF03BA43085E53900145A7D /* Resources */,
+				A10000000000000000000007 /* Embed App Extensions */,
+			);
+			dependencies = (
+				A10000000000000000000008 /* PBXTargetDependency */,
 			);
 			buildRules = (
 			);
@@ -64,7 +89,41 @@
 			productReference = AFF03BA63085E53900145A7D /* WattageManage.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A10000000000000000000009 /* WattageWidgets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A10000000000000000000014 /* Build configuration list for PBXNativeTarget "WattageWidgets" */;
+			buildPhases = (
+				A10000000000000000000010 /* Widget Sources */,
+				A10000000000000000000006 /* Widget Frameworks */,
+				A10000000000000000000011 /* Widget Resources */,
+			);
+			fileSystemSynchronizedGroups = (
+				A10000000000000000000005 /* WattageWidgets */,
+			);
+			name = WattageWidgets;
+			productName = WattageWidgets;
+			productReference = A10000000000000000000004 /* WattageWidgets.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
+
+/* Begin PBXContainerItemProxy section */
+		A10000000000000000000012 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFF03B9E3085E53900145A7D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A10000000000000000000009;
+			remoteInfo = WattageWidgets;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXTargetDependency section */
+		A10000000000000000000008 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A10000000000000000000009 /* WattageWidgets */;
+			targetProxy = A10000000000000000000012 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXProject section */
 		AFF03B9E3085E53900145A7D /* Project object */ = {
@@ -75,6 +134,9 @@
 				LastUpgradeCheck = 2710;
 				TargetAttributes = {
 					AFF03BA53085E53900145A7D = {
+						CreatedOnToolsVersion = 27.1;
+					};
+					A10000000000000000000009 = {
 						CreatedOnToolsVersion = 27.1;
 					};
 				};
@@ -94,6 +156,7 @@
 			projectRoot = "";
 			targets = (
 				AFF03BA53085E53900145A7D /* WattageManage */,
+				A10000000000000000000009 /* WattageWidgets */,
 			);
 		};
 /* End PBXProject section */
@@ -104,15 +167,42 @@
 			files = (
 			);
 		};
+		A10000000000000000000011 /* Widget Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = ();
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AFF03BA23085E53900145A7D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			files = (
+				A10000000000000000000001 /* WattageLiveData.swift in Sources */,
 			);
 		};
+		A10000000000000000000010 /* Widget Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = ();
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A10000000000000000000007 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A10000000000000000000003 /* WattageWidgets.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
 		AFF03BAF3085E53A00145A7D /* Debug configuration for PBXProject "WattageManage" */ = {
@@ -258,6 +348,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.reom.WattageManage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				CODE_SIGN_ENTITLEMENTS = Configuration/WattageManage.entitlements;
+				INFOPLIST_FILE = Configuration/App-Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Wattage;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
@@ -271,6 +364,7 @@
 		AFF03BB33085E53A00145A7D /* Release configuration for PBXNativeTarget "WattageManage" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				PROVISIONING_PROFILE_SPECIFIER = "$(WATTAGE_APP_PROFILE)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -290,11 +384,61 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.reom.WattageManage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				CODE_SIGN_ENTITLEMENTS = Configuration/WattageManage.entitlements;
+				INFOPLIST_FILE = Configuration/App-Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Wattage;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A10000000000000000000015 /* Debug configuration for PBXNativeTarget "WattageWidgets" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = Configuration/WattageWidgets.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J8F7S27Z23;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Configuration/WattageWidgets-Info.plist;
+				INFOPLIST_KEY_NSExtension_NSExtensionPointIdentifier = "com.apple.widgetkit-extension";
+				MARKETING_VERSION = 1.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.reom.WattageManage.Widgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A10000000000000000000016 /* Release configuration for PBXNativeTarget "WattageWidgets" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PROVISIONING_PROFILE_SPECIFIER = "$(WATTAGE_WIDGET_PROFILE)";
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = Configuration/WattageWidgets.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J8F7S27Z23;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Configuration/WattageWidgets-Info.plist;
+				INFOPLIST_KEY_NSExtension_NSExtensionPointIdentifier = "com.apple.widgetkit-extension";
+				MARKETING_VERSION = 1.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.reom.WattageManage.Widgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -316,6 +460,14 @@
 			buildConfigurations = (
 				AFF03BB23085E53A00145A7D /* Debug configuration for PBXNativeTarget "WattageManage" */,
 				AFF03BB33085E53A00145A7D /* Release configuration for PBXNativeTarget "WattageManage" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		A10000000000000000000014 /* Build configuration list for PBXNativeTarget "WattageWidgets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10000000000000000000015 /* Debug configuration for PBXNativeTarget "WattageWidgets" */,
+				A10000000000000000000016 /* Release configuration for PBXNativeTarget "WattageWidgets" */,
 			);
 			defaultConfigurationName = Release;
 		};

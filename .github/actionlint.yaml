@@ -1,0 +1,5 @@
+# Official hosted label added in October 2026; actionlint 1.7.12's built-in
+# runner list predates it. This only extends the linter's label allowlist.
+self-hosted-runner:
+  labels:
+    - xcode-27

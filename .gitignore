@@ -1,0 +1,29 @@
+# Xcode and Swift build output
+build/
+DerivedData/
+.build/
+*.xcarchive/
+*.ipa
+*.dSYM/
+*.dSYM.zip
+*.xcresult/
+
+# Local Xcode state
+xcuserdata/
+*.xcuserstate
+.DS_Store
+
+# Signing material and local configuration
+*.p12
+*.p8
+*.mobileprovision
+*.cer
+*.pem
+*.key
+.env
+.env.*
+!.env.example
+
+# Python tooling
+__pycache__/
+*.pyc
